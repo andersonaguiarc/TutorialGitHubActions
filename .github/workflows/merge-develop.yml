@@ -7,7 +7,7 @@ jobs:
   job1:
     name: Unit tests and merge to develop
     runs-on: ubuntu-latest
-    if: ${{ contains(github.event.head_commit.message, 'DONE') }}
+    if: ${{ contains(github.event.head_commit.message, 'DONE:') }}
     steps:
     - name: Checkout repositorio
       uses: actions/checkout@v3
