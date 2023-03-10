@@ -14,7 +14,7 @@ class Persona:
    def asignar_nombre(self, nombre):
        self.__nombre = nombre
 
-   def asignar_dueno(self, dueno):
+   def asignar_dueno(self, dueno, nombre):
        self.__dueno = dueno 
        self.__nombre = nombre
 
