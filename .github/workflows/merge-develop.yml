@@ -28,11 +28,6 @@ jobs:
     - name: Run tests
       id: run-tests
       run: python -m unittest -v tests/test_persona.py
-    - name: Validar resultado con errores
-      if: ${{ failure() }}
-      env:
-        MENSAJE_ERROR: Una o varias pruebas fallaron
-      run: echo "::set-output name=respuesta::${MENSAJE_ERROR}"
     - name: Merge feature -> develop
       if: ${{ success() }}
       uses: tukasz/direct-merge-action@master
